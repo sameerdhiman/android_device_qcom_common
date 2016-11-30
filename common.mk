@@ -105,40 +105,42 @@ HOSTAPD += hostapd.accept
 I420CC := libI420colorconvert
 
 #INIT
-INIT := init.qcom.composition_type.sh
-INIT += init.target.8x25.sh
-INIT += init.qcom.mdm_links.sh
-INIT += init.qcom.modem_links.sh
-INIT += init.qcom.sensor.sh
-INIT += init.target.rc
+INIT := hsic.control.bt.sh
+INIT += init.ath3k.bt.sh
+INIT += init.class_main.sh
+INIT += init.mdm.sh
+INIT += init.qcom.audio.sh
 INIT += init.qcom.bt.sh
-INIT += hsic.control.bt.sh
+INIT += init.qcom.class_core.sh
 INIT += init.qcom.coex.sh
-INIT += init.qcom.fm.sh
 INIT += init.qcom.early_boot.sh
-INIT += init.qcom.post_boot.sh
-INIT += init.qcom.syspart_fixup.sh
-INIT += init.qcom.rc
+INIT += init.qcom.efs.sync.sh
 INIT += init.qcom.factory.sh
+INIT += init.qcom.fm.sh
+INIT += init.qcom.post_boot.sh
+INIT += init.qcom.rc
 INIT += init.qcom.sdio.sh
 INIT += init.qcom.sh
-INIT += init.qcom.class_core.sh
-INIT += init.class_main.sh
-INIT += init.qcom.wifi.sh
-INIT += vold.fstab
-INIT += init.qcom.ril.path.sh
+INIT += init.qcom.ssr.sh
+INIT += init.qcom.syspart_fixup.sh
 INIT += init.qcom.usb.rc
 INIT += init.qcom.usb.sh
-INIT += usf_post_boot.sh
-INIT += init.qcom.efs.sync.sh
-INIT += ueventd.qcom.rc
-INIT += init.ath3k.bt.sh
+INIT += init.qcom.wifi.sh
 INIT += qca6234-service.sh
-INIT += init.qcom.audio.sh
-INIT += init.qcom.ssr.sh
+INIT += ueventd.qcom.rc
+# Device Specific
 INIT += enable_swap.sh
-INIT += init.mdm.sh
+INIT += init.qcom.modem_links.sh
 INIT += init.qcom.uicc.sh
+INIT += init.target.rc
+INIT += vold.fstab
+# Extra
+INIT += init.qcom.composition_type.sh
+INIT += init.target.8x25.sh
+INIT += init.qcom.mdm_links.sh
+INIT += init.qcom.sensor.sh
+INIT += init.qcom.ril.path.sh
+INIT += usf_post_boot.sh
 
 #IPROUTE2
 IPROUTE2 := ip
