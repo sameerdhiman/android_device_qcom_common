@@ -1,26 +1,5 @@
 # Board platforms lists to be used for
 # TARGET_BOARD_PLATFORM specific featurization
-QCOM_BOARD_PLATFORMS := msm7627_surf
-QCOM_BOARD_PLATFORMS += msm7627_6x
-QCOM_BOARD_PLATFORMS += msm7627a
-QCOM_BOARD_PLATFORMS += msm7630_surf
-QCOM_BOARD_PLATFORMS += msm7630_fusion
-QCOM_BOARD_PLATFORMS += msm8660
-QCOM_BOARD_PLATFORMS += msm8960
-QCOM_BOARD_PLATFORMS += msm8974
-QCOM_BOARD_PLATFORMS += msm8610
-QCOM_BOARD_PLATFORMS += msm8226
-QCOM_BOARD_PLATFORMS += apq8084
-QCOM_BOARD_PLATFORMS += mpq8092
-
-MSM7K_BOARD_PLATFORMS := msm7630_surf
-MSM7K_BOARD_PLATFORMS += msm7630_fusion
-MSM7K_BOARD_PLATFORMS += msm7627_surf
-MSM7K_BOARD_PLATFORMS += msm7627_6x
-MSM7K_BOARD_PLATFORMS += msm7627a
-MSM7K_BOARD_PLATFORMS += msm7k
-
-QSD8K_BOARD_PLATFORMS := qsd8k
 
 TARGET_USE_VENDOR_CAMERA_EXT := true
 
@@ -29,41 +8,6 @@ TARGET_USE_VENDOR_CAMERA_EXT := true
 # optional tag, which will not be available on target unless
 # explicitly list here. Where project corresponds to the vars here
 # in CAPs.
-
-#ALSA
-ALSA_HARDWARE := alsa.msm8960
-ALSA_HARDWARE += alsa.msm8974
-ALSA_HARDWARE += alsa.msm8226
-ALSA_HARDWARE += alsa.msm8610
-ALSA_HARDWARE += alsa.apq8084
-
-ALSA_UCM := snd_soc_msm
-ALSA_UCM += snd_soc_msm_2x
-ALSA_UCM += snd_soc_msm_2x_mpq
-ALSA_UCM += snd_soc_msm_2x_Fusion3
-ALSA_UCM += snd_soc_msm_Sitar
-ALSA_UCM += snd_soc_msm_auxpcm
-ALSA_UCM += snd_soc_msm_2x_auxpcm
-ALSA_UCM += snd_soc_msm_2x_mpq_auxpcm
-ALSA_UCM += snd_soc_msm_2x_Fusion3_auxpcm
-ALSA_UCM += snd_soc_msm_Sitar_auxpcm
-ALSA_UCM += snd_soc_msm_Taiko
-ALSA_UCM += snd_soc_msm_Taiko_CDP
-ALSA_UCM += snd_soc_msm_Taiko_Fluid
-ALSA_UCM += snd_soc_msm_Taiko_liquid
-ALSA_UCM += snd_soc_apq_Taiko_DB
-ALSA_UCM += snd_soc_msm_I2SFusion
-ALSA_UCM += snd_soc_msm_Tapan
-ALSA_UCM += snd_soc_msm_TapanLite
-ALSA_UCM += snd_soc_msm_Tapan_SKUF
-ALSA_UCM += snd_soc_msm_TapanLite_SKUF
-ALSA_UCM += snd_soc_msm_8x10_wcd
-ALSA_UCM += snd_soc_msm_8x10_wcd_skuab
-ALSA_UCM += snd_soc_msm_8x10_wcd_skuaa
-ALSA_UCM += snd_soc_msm_samarium_Tapan
-
-#ANGLE
-# ANGLE := libangle
 
 AUDIO_HARDWARE := audio.primary.mpq8064
 AUDIO_HARDWARE += audio.primary.apq8084
@@ -103,31 +47,15 @@ TINY_ALSA_TEST_APPS += tinymix
 TINY_ALSA_TEST_APPS += tinypcminfo
 TINY_ALSA_TEST_APPS += cplay
 
-#AMPLOADER
-# AMPLOADER := amploader
-
-#APPS
-# APPS := QualcommSoftAP
-# APPS += TSCalibration
-
-#BRCTL
-# BRCTL := brctl
-# BRTCL += libbridge
-
 #BSON
 BSON := libbson
 
 #BT
-# BT := javax.btobex
-# BT += libattrib_static
-BT += hcidump.sh
+BT := hcidump.sh
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/qcom/common
 
 #C2DColorConvert
 C2DCC := libc2dcolorconvert
-
-#CIMAX
-# CIMAX := libcimax_spi
 
 #CONNECTIVITY
 CONNECTIVITY := libcnefeatureconfig
@@ -140,10 +68,6 @@ CURL += curl
 #DASH
 DASH := libdashplayer
 DASH += qcmediaplayer
-
-#DATA_OS
-# DATA_OS := librmnetctl
-# DATA_OS += rmnetcli
 
 #EBTABLES
 EBTABLES := ebtables
@@ -165,9 +89,6 @@ GPS_HARDWARE += libloc_adapter
 GPS_HARDWARE += libgps.utils
 GPS_HARDWARE += libloc_eng
 GPS_HARDWARE += libloc_api_v02
-
-#HDMID
-# HDMID := hdmid
 
 #HOSTAPD
 HOSTAPD := hostapd
@@ -224,12 +145,8 @@ IPROUTE2 := ip
 IPROUTE2 += libiprouteutil
 
 #IPTABLES
-# IPTABLES := libiptc
-IPTABLES += libext
+IPTABLES := libext
 IPTABLES += iptables
-
-#KERNEL_TESTS
-# KERNEL_TESTS := mm-audio-native-test
 
 #KEYPAD
 KEYPAD := ffa-keypad_qwerty.kcm
@@ -261,11 +178,6 @@ KEYPAD += philips_remote_ir.kl
 KEYPAD += samsung_remote_ir.kl
 KEYPAD += surf_keypad.kl
 KEYPAD += ue_rf4ce_remote.kl
-
-#KS
-# KS := ks
-# KS += qcks
-# KS += efsks
 
 #LIB_NL
 LIB_NL := libnl_2
@@ -304,10 +216,6 @@ LIBCOPYBIT += copybit.msm7630_fusion
 LIBCOPYBIT += copybit.msm7627_surf
 LIBCOPYBIT += copybit.msm7627_6x
 LIBCOPYBIT += copybit.msm7627a
-
-#LIBGESTURES
-# LIBGESTURES := libgestures
-# LIBGESTURES += gestures.msm8960
 
 #LIBGRALLOC
 LIBGRALLOC := gralloc.default
@@ -366,21 +274,11 @@ LIBAUDIOPARAM := libaudioparameter
 #LIBAUDIORESAMPLER -- High-quality audio resampler
 LIBAUDIORESAMPLER := libaudio-resampler
 
-#LIBOPENCOREHW
-# LIBOPENCOREHW := libopencorehw
-
 #LIBOVERLAY
 LIBOVERLAY := liboverlay
-# LIBOVERLAY += overlay.default
 
 #LIBGENLOCK
 LIBGENLOCK := libgenlock
-
-#LIBPERFLOCK
-# LIBPERFLOCK := org.codeaurora.Performance
-
-#LIBQCOMUI
-# LIBQCOMUI := libQcomUI
 
 #LIBQDUTILS
 LIBQDUTILS := libqdutils
@@ -388,8 +286,12 @@ LIBQDUTILS := libqdutils
 #LIBQDMETADATA
 LIBQDMETADATA := libqdMetaData
 
-#LIBPOWER
-LIBPOWER := power.qcom
+#LIBPOWER CyanogenMod Specific
+LIBPOWER := power.msm8974
+LIBPOWER += power.msm8960
+LIBPOWER += power.msm8226
+LIBPOWER += power.msm8610
+LIBPOWER += power.msm8916
 
 #LLVM for RenderScript
 #use qcom LLVM
@@ -408,20 +310,16 @@ MM_AUDIO += libOmxAmrEnc
 MM_AUDIO += libOmxEvrcEnc
 MM_AUDIO += libOmxMp3Dec
 MM_AUDIO += libOmxQcelp13Enc
-# MM_AUDIO += libOmxAc3HwDec
 
 #MM_CORE
 MM_CORE := libmm-omxcore
 MM_CORE += libOmxCore
 
 #MM_VIDEO
-# MM_VIDEO := ast-mm-vdec-omx-test
 MM_VIDEO += libdivxdrmdecrypt
-# MM_VIDEO += liblasic
 MM_VIDEO += libOmxVdec
 MM_VIDEO += libOmxVdecHevc
 MM_VIDEO += libOmxVenc
-# MM_VIDEO += libOmxVidEnc
 MM_VIDEO += libstagefrighthw
 MM_VIDEO += mm-vdec-omx-property-mgr
 MM_VIDEO += mm-vdec-omx-test
@@ -501,72 +399,42 @@ WLAN += pronto_wlan.ko
 FUSB := com.android.future.usb.accessory
 
 PRODUCT_PACKAGES := \
-    DeskClock \
-    Calculator \
-    Calendar \
-    CertInstaller \
-    Email \
-    Gallery2 \
-    Phone \
-    Provision \
-    QuickSearchBox \
-    Settings \
-    Sync \
-    SystemUI \
-    CalendarProvider \
-    SyncProvider \
-    IM \
     FM2 \
     FMRecord
 
-PRODUCT_PACKAGES += $(ALSA_HARDWARE)
-PRODUCT_PACKAGES += $(ALSA_UCM)
-PRODUCT_PACKAGES += $(ANGLE)
 PRODUCT_PACKAGES += $(AUDIO_HARDWARE)
 PRODUCT_PACKAGES += $(AUDIO_POLICY)
 PRODUCT_PACKAGES += $(TINY_ALSA_TEST_APPS)
-PRODUCT_PACKAGES += $(AMPLOADER)
-PRODUCT_PACKAGES += $(APPS)
-PRODUCT_PACKAGES += $(BRCTL)
 PRODUCT_PACKAGES += $(BSON)
 PRODUCT_PACKAGES += $(BT)
 PRODUCT_PACKAGES += $(C2DCC)
-PRODUCT_PACKAGES += $(CIMAX)
-PRODUCT_PACKAGES += $(CONNECTIVITY)
 PRODUCT_PACKAGES += $(CHARGER)
+PRODUCT_PACKAGES += $(CONNECTIVITY)
 PRODUCT_PACKAGES += $(CURL)
 PRODUCT_PACKAGES += $(DASH)
-PRODUCT_PACKAGES += $(DATA_OS)
 PRODUCT_PACKAGES += $(E2FSPROGS)
 PRODUCT_PACKAGES += $(EBTABLES)
 PRODUCT_PACKAGES += $(FASTPOWERON)
 PRODUCT_PACKAGES += $(FM)
 PRODUCT_PACKAGES += $(GPS_HARDWARE)
-PRODUCT_PACKAGES += $(HDMID)
 PRODUCT_PACKAGES += $(HOSTAPD)
 PRODUCT_PACKAGES += $(I420CC)
 PRODUCT_PACKAGES += $(INIT)
 PRODUCT_PACKAGES += $(IPROUTE2)
 PRODUCT_PACKAGES += $(IPTABLES)
-PRODUCT_PACKAGES += $(KERNEL_TESTS)
 PRODUCT_PACKAGES += $(KEYPAD)
-PRODUCT_PACKAGES += $(KS)
 PRODUCT_PACKAGES += $(LIB_NL)
 PRODUCT_PACKAGES += $(LIB_XML2)
 PRODUCT_PACKAGES += $(LIBCAMERA)
-PRODUCT_PACKAGES += $(LIBGESTURES)
 PRODUCT_PACKAGES += $(LIBCOPYBIT)
 PRODUCT_PACKAGES += $(LIBGRALLOC)
 PRODUCT_PACKAGES += $(LIBMEMTRACK)
 PRODUCT_PACKAGES += $(LIBLIGHTS)
+PRODUCT_PACKAGES += $(LIBHWCOMPOSER)
 PRODUCT_PACKAGES += $(LIBAUDIOPARAM)
 PRODUCT_PACKAGES += $(LIBAUDIORESAMPLER)
-PRODUCT_PACKAGES += $(LIBOPENCOREHW)
 PRODUCT_PACKAGES += $(LIBOVERLAY)
-PRODUCT_PACKAGES += $(LIBHWCOMPOSER)
 PRODUCT_PACKAGES += $(LIBGENLOCK)
-PRODUCT_PACKAGES += $(LIBPERFLOCK)
-PRODUCT_PACKAGES += $(LIBQCOMUI)
 PRODUCT_PACKAGES += $(LIBQDUTILS)
 PRODUCT_PACKAGES += $(LIBQDMETADATA)
 PRODUCT_PACKAGES += $(LIBPOWER)
@@ -577,15 +445,8 @@ PRODUCT_PACKAGES += $(MM_CORE)
 PRODUCT_PACKAGES += $(MM_VIDEO)
 PRODUCT_PACKAGES += $(OPENCORE)
 PRODUCT_PACKAGES += $(PPP)
-PRODUCT_PACKAGES += $(PVOMX)
-PRODUCT_PACKAGES += $(RF4CE)
-PRODUCT_PACKAGES += $(SENSORS_HARDWARE)
 PRODUCT_PACKAGES += $(SOFTAP)
-PRODUCT_PACKAGES += $(STK)
-PRODUCT_PACKAGES += $(STMLOG)
-PRODUCT_PACKAGES += $(TSLIB_EXTERNAL)
 PRODUCT_PACKAGES += $(QRGND)
-PRODUCT_PACKAGES += $(UPDATER)
 PRODUCT_PACKAGES += $(WPA)
 PRODUCT_PACKAGES += $(ZLIB)
 PRODUCT_PACKAGES += $(VT_JNI)
@@ -624,8 +485,8 @@ PRODUCT_COPY_FILES := \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
+    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
@@ -633,7 +494,7 @@ PRODUCT_COPY_FILES += \
     system/bluetooth/data/auto_pairing.conf:system/etc/bluetooth/auto_pairing.conf \
     system/bluetooth/data/blacklist.conf:system/etc/bluetooth/blacklist.conf \
     system/bluetooth/data/input.conf:system/etc/bluetooth/input.conf \
-    system/bluetooth/data/network.conf:system/etc/bluetooth/network.conf \
+    system/bluetooth/data/network.conf:system/etc/bluetooth/network.conf
 
 ifeq ($(BOARD_HAVE_BLUETOOTH_BLUEZ),true)
 PRODUCT_COPY_FILES += \
