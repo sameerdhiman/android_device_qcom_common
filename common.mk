@@ -318,7 +318,7 @@ MM_CORE := libmm-omxcore
 MM_CORE += libOmxCore
 
 #MM_VIDEO
-MM_VIDEO += libdivxdrmdecrypt
+MM_VIDEO := libdivxdrmdecrypt
 MM_VIDEO += libOmxVdec
 MM_VIDEO += libOmxVdecHevc
 MM_VIDEO += libOmxVenc
